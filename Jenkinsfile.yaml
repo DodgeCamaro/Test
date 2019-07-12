@@ -1,0 +1,11 @@
+#  Docker image agent example
+agent:
+ label: my_label
+ dockerImage: maven:3-alpine
+ args: -v /tmp:/tmp
+
+stages:
+  - name: slave
+    agent: slave
+    steps:
+      - echo "Hello"
