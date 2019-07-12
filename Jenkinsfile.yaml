@@ -1,6 +1,6 @@
 #  Docker image agent example
 agent:
- label: my_label
+ label: ecs
  dockerImage: maven:3-alpine
  args: -v /tmp:/tmp
 
