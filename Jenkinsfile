@@ -1,4 +1,3 @@
-#  Docker image agent example
 agent:
  label: ecs
  dockerImage: maven:3-alpine
