@@ -1,5 +1,6 @@
 pipeline {
   agent {
+    label 'ecs-jenkins'
     docker {
       image 'maven:3.3.3'
     }
@@ -12,7 +13,5 @@ pipeline {
       }
     }
   }
-  environment {
-    label = 'ecs-jenkins'
-  }
+
 }
