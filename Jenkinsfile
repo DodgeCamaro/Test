@@ -5,7 +5,7 @@ pipeline {
     stage('Test') {
         agent {
             ecs {
-                inheritFrom 'my-preconfigured-template'
+                inheritFrom 'ecs-slave'
                 cpu 2048
                 memory 2048
             }
