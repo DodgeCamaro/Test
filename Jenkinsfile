@@ -13,6 +13,6 @@ pipeline {
     }
   }
   environment {
-    label = 'ecs'
+    label = 'ecs-jenkins'
   }
 }
