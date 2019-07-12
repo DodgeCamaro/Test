@@ -1,12 +1,18 @@
 pipeline {
-  agent {
-    ecs true
-  }
+  agent none
+
   stages {
-    stage('build') {
-      steps {
-        sh 'mvn --version'
-      }
+    stage('Test') {
+        agent {
+            ecs {
+                inheritFrom 'my-preconfigured-template'
+                cpu 2048
+                memory 2048
+            }
+        }
+        steps {
+            sh 'echo hello'
+        }
     }
   }
 }
