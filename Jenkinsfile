@@ -2,7 +2,7 @@ pipeline {
   agent none
   stages {
     stage('Test') {
-        agent { label 'ecs'}
+        agent { label 'master'}
         steps {
             sh 'echo hello from ecs'
         }
