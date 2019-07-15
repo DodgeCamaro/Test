@@ -1,14 +1,10 @@
 pipeline {
   agent none
-
   stages {
     stage('Test') {
-        agent {
-            ecs {
-            }
-        }
+        agent { label 'ecs'}
         steps {
-            sh 'echo hello'
+            sh 'echo hello from ecs'
         }
     }
   }
