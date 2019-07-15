@@ -5,7 +5,6 @@ pipeline {
     stage('Test') {
         agent {
             ecs {
-                inheritFrom 'ecs'
             }
         }
         steps {
