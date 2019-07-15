@@ -1,16 +1,18 @@
 pipeline {
-  agent {
-    ecs true
-    docker {
-      image 'maven:3.3.3'
-    }
+  agent none
 
-  }
   stages {
-    stage('build') {
-      steps {
-        sh 'mvn --version'
-      }
+    stage('Test') {
+        agent {
+            ecs {
+                inheritFrom 'jnlp-slave'
+                cpu 1024
+                memory 2048
+            }
+        }
+        steps {
+            sh 'echo hello'
+        }
     }
   }
 }
