@@ -6,7 +6,7 @@ pipeline {
         agent {
             ecs {
                 cloud 'ecs-cloud'
-                inheritFrom 'jnlp-slave'
+                inheritFrom 'base'
                 cpu 1024
                 memory 2048
             }
