@@ -4,7 +4,7 @@ pipeline {
     stage('Test') {
         agent { label 'ecs'}
         steps {
-            sh 'echo hello from ecs'
+            sh 'echo hello'
         }
     }
   }
